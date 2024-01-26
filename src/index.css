@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-white; /* Set the background color to dark gray and text color to white */
+}
+
+.glass-background {
+  position: relative;
+  background: rgba(255, 255, 255, 0.4); /* Adjust the opacity as needed */
+  border-radius: 15px; /* Adjust the border-radius as needed */
+  overflow: hidden;
+}
