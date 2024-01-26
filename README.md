@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite + Redux-Toolkit
 
 ![Screenshot 2024-01-27 004701](https://github.com/Tiran-Jayasekara/countryComparison/assets/70306643/5c99391f-a4bc-49f3-8201-b265d6e2214b)
 ![Screenshot 2024-01-27 004631](https://github.com/Tiran-Jayasekara/countryComparison/assets/70306643/26d54a07-1cfd-4450-a4df-ddd8378644fb)
