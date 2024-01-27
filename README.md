@@ -8,6 +8,9 @@
 ![a](https://github.com/Tiran-Jayasekara/countryComparison/assets/70306643/acf8e424-2ea4-4a0c-8a46-648d54651a64)
 ![s](https://github.com/Tiran-Jayasekara/countryComparison/assets/70306643/f308042f-db9b-4317-8b21-c00f79839b39)
 
+2.	Open Project -> Go to Terminal -> New Terminal -> Type -> npm install
+
+3.	Type -> npm run dev (Because I used vite Development server)
 
 
 
