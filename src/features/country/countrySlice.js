@@ -7,6 +7,7 @@ const initialState = {
     error: ''
 }
 
+// Featching Countries Data
 export const fetchCountry = createAsyncThunk('country/fetchCountry', () => {
     return axios.get('https://restcountries.com/v2/all').then(res => res.data)
 })

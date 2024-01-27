@@ -7,8 +7,6 @@ import DropDown from "../../components/dropDown";
 const CountryView = () => {
   const dispatch = useDispatch();
   const country = useSelector((state) => state.country);
-  console.log(country);
-
 
   const [firstCountry, setFirstCountry] = useState();
   const [secoundCountry, setSecoundCountry] = useState();
@@ -17,6 +15,7 @@ const CountryView = () => {
     dispatch(fetchCountry());
   }, []);
 
+  // Find and set first Country Data
   const firstCountryData = (event) => {
     const selectedCountry = country.countries.find(
       (c) => c.name === event.target.value
@@ -24,6 +23,7 @@ const CountryView = () => {
     setFirstCountry(selectedCountry);
   };
 
+  // Find and set Secound Country Data
   const secoundCountryData = (event) => {
     const selectedCountry = country.countries.find(
       (c) => c.name === event.target.value
@@ -31,8 +31,11 @@ const CountryView = () => {
     setSecoundCountry(selectedCountry);
   };
 
+  console.log(country);
+
   return (
     <div className="w-full flex flex-row">
+      
       {/* First Country Design */}
       <div className="w-1/2 md:mr-5 md:ml-10 rounded-xl mb-10">
         <div className="w-full bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm h-auto rounded-xl">
@@ -48,7 +51,7 @@ const CountryView = () => {
 
       {/* Secound Country Design */}
       <div className="w-1/2 md:mr-10 md:ml-5 ml-1">
-      <div className="w-full bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm h-auto rounded-xl">
+        <div className="w-full bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm h-auto rounded-xl">
           <div className="flex flex-col ">
             <label className="block mb-4 font-bold pt-4 pb-4 md:text-2xl font-playfair bg-gray-900  text-center">
               <h1 className="">Secound Country</h1>

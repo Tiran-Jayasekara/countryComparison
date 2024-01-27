@@ -1,6 +1,7 @@
 import React from "react";
 import worldImage from "../assets/world1.jpg";
 
+// Show Country Data
 const CountryDetails = ({ ContryData }) => {
   return (
     <>
@@ -16,16 +17,16 @@ const CountryDetails = ({ ContryData }) => {
             </div>
 
             <div className="mt-6 flex flex-col md:w-full w-full text-black">
-              <div className="flex flex-row text-center md:w-80 w-auto md:mx-auto md:justify-between justify-center mx-2">
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
                 <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
-                  Counrty Name
+                  Country Name
                 </p>
                 <p>:</p>
                 <p className="md:text-2xl text-sm md:ml-4 ml-1 font-playfair font-bold text-right text-blue-600">
                   {ContryData ? ContryData.name : null}
                 </p>
               </div>
-              <div className="flex flex-row text-center md:w-80 w-auto md:mx-auto md:justify-between justify-center mx-2">
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
                 <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
                   Capital
                 </p>
@@ -34,7 +35,16 @@ const CountryDetails = ({ ContryData }) => {
                   {ContryData ? ContryData.capital : null}
                 </p>
               </div>
-              <div className="flex flex-row text-center md:w-80 w-auto md:mx-auto md:justify-between justify-center mx-2">
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
+                <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
+                  Region
+                </p>
+                <p>:</p>
+                <p className="md:text-2xl text-sm font-playfair md:ml-4 ml-1 font-bold text-right  text-blue-600">
+                  {ContryData ? ContryData.region : null}
+                </p>
+              </div>
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
                 <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
                   Population
                 </p>
@@ -43,7 +53,7 @@ const CountryDetails = ({ ContryData }) => {
                   {ContryData ? ContryData.population : null}
                 </p>
               </div>
-              <div className="flex flex-row text-center md:w-80 w-auto md:mx-auto md:justify-between justify-center mx-2">
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
                 <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
                   Area
                 </p>
@@ -52,24 +62,43 @@ const CountryDetails = ({ ContryData }) => {
                   {ContryData ? ContryData.area : null}
                 </p>
               </div>
-              <div className="flex flex-row text-center md:w-80 w-auto md:mx-auto md:justify-between justify-center mx-2">
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
                 <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
                   Languages
                 </p>
                 <p>:</p>
                 <div className="flex flex-col">
-                  {ContryData.languages.map((data, index) => (
-                    <p
-                      key={index}
-                      className="md:text-2xl text-sm font-playfair md:ml-4 ml-1 font-bold text-right text-blue-600"
-                    >
-                      {data.name}
-                    </p>
-                  ))}
+                  {ContryData.languages
+                    ? ContryData.languages.map((data, index) => (
+                        <p
+                          key={index}
+                          className="md:text-2xl text-sm font-playfair md:ml-4 ml-1 font-bold text-right text-blue-600"
+                        >
+                          {data.name}
+                        </p>
+                      ))
+                    : null}
                 </div>
               </div>
 
-              {/* Languages : {ContryData ? ContryData.languages : null} */}
+              <div className="flex flex-row text-center md:w-96 w-auto md:mx-auto md:justify-between justify-center mx-2">
+                <p className="md:text-2xl text-sm font-playfair font-bold text-left text-gray-900 flex-grow-0">
+                  Currencies
+                </p>
+                <p>:</p>
+                <div className="flex flex-col">
+                  {ContryData.currencies
+                    ? ContryData.currencies.map((data, index) => (
+                        <p
+                          key={index}
+                          className="md:text-2xl text-sm font-playfair md:ml-4 ml-1 font-bold text-right text-blue-600"
+                        >
+                          {data.name}
+                        </p>
+                      ))
+                    : null}
+                </div>
+              </div>
             </div>
           </>
         ) : (

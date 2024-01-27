@@ -3,23 +3,28 @@ import React, { useEffect } from "react";
 const DropDown = ({ country, CountryData }) => {
   return (
     <>
+      {/* Data Loadning part */}
       {country.loading ? (
         <div className="text-black text-center text-xl mt-2 mb-2">
           Loading.......
         </div>
       ) : null}
+
+      {/* Checking is there any error when data Fetching */}
       {country.error ? (
         <div
-          class="bg-red-100 border border-red-400 text-red-700 md:px-4 px-2 md:py-3 mx-1 mb-2 rounded relative mt-4 md:mx-10"
+          className="bg-red-100 border border-red-400 text-red-700 md:px-4 px-2 md:py-3 mx-1 mb-2 rounded relative mt-4 md:mx-10"
           role="alert"
         >
-          <strong class="font-bold text-xs md:text-sm">Holy smokes! </strong>
-          <span class="block text-xs md:text-sm">
+          <strong className="font-bold text-xs md:text-sm">
+            Holy smokes!{" "}
+          </strong>
+          <span className="block text-xs md:text-sm">
             Something seriously bad in Data Fetching.
           </span>
-          <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+          <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
             <svg
-              class="fill-current h-6 w-6 text-red-500"
+              className="fill-current h-6 w-6 text-red-500"
               role="button"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -30,6 +35,8 @@ const DropDown = ({ country, CountryData }) => {
           </span>
         </div>
       ) : null}
+
+      {/* Countries Drop Down */}
       <select
         id="countries"
         className=" z-0 bg-gray-50 border m-10 mt-0 text-gray-900 text-sm rounded-lg border-stone-400 focus:ring-blue-500 focus:border-blue-500 block p-2.5"
